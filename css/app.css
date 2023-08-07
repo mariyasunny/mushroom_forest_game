@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bangers', cursive;
+    color: #fff;
+    font-size: 25px;
+}
+#gameCanvas{
+    background: url("../assets/images/background.png");
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+#overlay{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    pointer-events: none;
+}
+
+#obstacles, #bull, #egg, #toad,#toads, #larva {
+    display:none;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+ font-family: 'Courier New', Courier, monospace;
+}
+
+#playPauseButton {
+  /* Add styles for the play button */
+  position: absolute;
+  top: 10%; /* Adjust the top position as needed */
+  left: 30%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e23f1f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#volumeToggle {
+  /* Add styles for the play button */
+  position: absolute;
+  top: 10%; /* Adjust the top position as needed */
+  left: 37%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e23f1f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+audio {
+  position: absolute;
+  top: 10.5%; /* Adjust the top position as needed */
+  right: 40%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
+  width: 200px;
+}
+#popup {
+  position: absolute;
+  top: 50%; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
+  width:900px;
+  height: 500px;
+  background-color: hsl(75, 25%, 97%);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  display: none;
+  /* Adjust the popup styles as needed */
+}
+  
+  .hidden {
+    display: none;
+    width:  400px;
+    margin: 20px;
+  }
+
+  .left,.d,.r,.play,.mute{
+    margin-left: 150px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    gap: 40px;
+   
+  }
+  p {
+    margin-left: 100px;
+  }
+  .left,.d,.r,.mute{
+    gap: 80px;
+  }
+#hoverButton{
+  position: absolute;
+  top: 10%; /* Adjust the top position as needed */
+  left: 82%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e23f1f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}  
+
+button {
+  position: absolute;
+  top: 10%; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#name {
+  font-weight: 200px;
+  color: crimson;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
+  z-index: 1;
+}
+
+/* Style for the instructions box */
+.instructions-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 80%;
+  height: 700px;
+}
+.instructions-box #play-button {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e23f1f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

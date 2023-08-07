@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bruno+Ace+SC&family=Dancing+Script:wght@500&family=Lobster&display=swap"
+ rel="stylesheet">
+    <title>Fantacy Mushroom Forest Game</title>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <audio id="backgroundMusic" loop>
+        <source src="assets/audio/bgmusic.wav" type="audio/wav">
+        <!-- Provide additional source elements for other formats -->
+      </audio>
+      
+    <img src="assets/images/overlay.png" alt="overlay" id="overlay">
+    <img src="assets/images/obstacles.png" alt="obstacles" id="obstacles">
+    <img src="assets/images/bull.png" alt="bull" id="bull">
+    <img src="assets/images/egg.png" alt="egg" id="egg">
+    <img src="assets/images/toad.png" alt="toad" id="toad">
+    <img src="assets/images/sprite.png" alt="toads" id="toads">
+    <img src="assets/images/larva.png" alt="larva" id="larva">
+    <button id="playPauseButton">Start game</button>
+    <button id="volumeToggle">Unmute</button>
+    <audio id="audioPlayer" src="assets/audio/bgmusic.wav" loop autoplay></audio>
+
+   
+      
+<div id="popup" class="hidden">
+  
+</div>
+<div class="overlay" id="instructionsOverlay">
+  <div class="instructions-box">
+      <span class="close-button" onclick="closeInstructions()">&times;</span>
+      
+     
+      <h1></h1>
+  <div class="intro"> <p>
+        Please help the larvas and eggs to reach the mushroom forest safely, watch out for the Toads
+      </p></div>
+  <div class="left">
+    <h3>Left Mouse </h3>
+    <p> Moves the player</p> 
+  </div>
+  <div class="d">
+    <h3>Press D</h3> 
+    <p> Remove the collision circle</p>
+  </div>
+  <div class="r">
+    <h3>Press R</h3>
+    <p> Restart the game</p>
+  </div>
+  <div class="play">
+    <h3>Start</h3>
+    <p> Pause or Resume Game</p>
+  </div>
+  
+  <div class="mute">
+    <h3>Mute</h3>
+    <p> Mute Background music</p>
+  </div>
+  
+  <div> <button id="play-button" onclick="startGame()">Play Now</button></div>
+     
+  </div>
+</div>
+    
+    <script src="js/Player.js"></script>
+    <script src="js/Obstacle.js"></script>
+    <script src="js/Egg.js"></script>
+    <script src="js/Larva.js"></script>
+    <script src="js/Enemy.js"></script>
+    <script src="js/Particle.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
